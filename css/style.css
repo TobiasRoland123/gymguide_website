@@ -13,6 +13,23 @@ body {
   background-color: var(--color_1);
 }
 
+header {
+  background-color: var(--color_3);
+}
+
+header img {
+  max-width: 12.5%;
+}
+.logotekst {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
 nav ul {
   /* display: none; */
 }
