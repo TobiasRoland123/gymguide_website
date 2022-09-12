@@ -186,6 +186,18 @@ nav button {
   background-color: var(--color_3);
   padding: 2% 14%;
 }
+
+/* Her styles oevelse.html */
+
+.oevelser_grid {
+  margin: 10% 5%;
+}
+
+.oevelse_container img {
+  max-width: 100%;
+}
+
+/*  Her styles footer */
 footer {
   background-color: #fff;
 }
