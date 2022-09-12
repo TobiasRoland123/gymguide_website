@@ -230,3 +230,7 @@ footer p {
   font-size: 0.8rem;
   font-weight: 100;
 }
+
+footer .copyright p {
+  margin: 0;
+}
