@@ -93,14 +93,13 @@ nav button {
   left: 0;
 }
 
-<<<<<<< HEAD
 main {
   margin: 0 auto;
-=======
+}
+
 main h1 {
   margin: 8% 0;
   text-align: center;
->>>>>>> header-styling-mobile-tobias
 }
 
 .splashbillede {
