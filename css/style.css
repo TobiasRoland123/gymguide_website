@@ -247,6 +247,30 @@ main h1 {
   min-width: 100px;
   padding: 1%;
 }
+
+.oevelser_detaljer_container {
+  margin: 0 5%;
+}
+
+.oevelser_detaljer_container h3 {
+  margin: 10% auto;
+}
+
+.oevelser_detaljer_container p {
+  max-width: 76ch;
+  line-height: 140%;
+}
+.oevelser_detaljer_container strong {
+  font-weight: 700;
+}
+
+iframe {
+  max-width: 100%;
+  margin: 0 auto;
+  height: auto;
+  aspect-ratio: 16/9;
+  margin-bottom: 2%;
+}
 /*  Her styles footer */
 footer {
   background-color: #fff;
