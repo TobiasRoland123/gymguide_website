@@ -93,6 +93,11 @@ nav button {
   left: 0;
 }
 
+main h1 {
+  margin: 8% 0;
+  text-align: center;
+}
+
 .splashbillede {
   background-image: url(../billeder/splashbillede.webp);
   background-size: 170%;
@@ -189,14 +194,59 @@ nav button {
 
 /* Her styles oevelse.html */
 
+.kategorier ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  margin: 0 15%;
+}
+
+.kategorier button {
+  background-color: var(--color_3);
+  border: none;
+  border-radius: 7px;
+  min-width: 100px;
+  padding: 8% 0;
+  margin: 5%;
+}
+
+.kategorier .valgt {
+  background-color: var(--color_2);
+}
+
 .oevelser_grid {
   margin: 10% 5%;
+}
+.oevelse_container {
+  display: grid;
+  margin: 20% auto 30%;
+  cursor: pointer;
 }
 
 .oevelse_container img {
   max-width: 100%;
 }
 
+.oevelse_container h3 {
+  margin: 3% 0;
+}
+
+.oevelse_container p {
+  font-weight: 100;
+  margin: 3% 0;
+}
+.muskelgruppe_og_knap {
+  display: flex;
+  justify-content: space-between;
+}
+.oevelse_container button {
+  background-color: var(--color_3);
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  min-width: 100px;
+  padding: 1%;
+}
 /*  Her styles footer */
 footer {
   background-color: #fff;
