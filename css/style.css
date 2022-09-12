@@ -93,8 +93,14 @@ nav button {
   left: 0;
 }
 
+<<<<<<< HEAD
 main {
   margin: 0 auto;
+=======
+main h1 {
+  margin: 8% 0;
+  text-align: center;
+>>>>>>> header-styling-mobile-tobias
 }
 
 .splashbillede {
@@ -190,6 +196,87 @@ main {
   background-color: var(--color_3);
   padding: 2% 14%;
 }
+
+/* Her styles oevelse.html */
+
+.kategorier ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  margin: 0 15%;
+}
+
+.kategorier button {
+  background-color: var(--color_3);
+  border: none;
+  border-radius: 7px;
+  min-width: 100px;
+  padding: 8% 0;
+  margin: 5%;
+}
+
+.kategorier .valgt {
+  background-color: var(--color_2);
+}
+
+.oevelser_grid {
+  margin: 10% 5%;
+}
+.oevelse_container {
+  display: grid;
+  margin: 20% auto 30%;
+  cursor: pointer;
+}
+
+.oevelse_container img {
+  max-width: 100%;
+}
+
+.oevelse_container h3 {
+  margin: 3% 0;
+}
+
+.oevelse_container p {
+  font-weight: 100;
+  margin: 3% 0;
+}
+.muskelgruppe_og_knap {
+  display: flex;
+  justify-content: space-between;
+}
+.oevelse_container button {
+  background-color: var(--color_3);
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  min-width: 100px;
+  padding: 1%;
+}
+
+.oevelser_detaljer_container {
+  margin: 0 5%;
+}
+
+.oevelser_detaljer_container h3 {
+  margin: 10% auto;
+}
+
+.oevelser_detaljer_container p {
+  max-width: 76ch;
+  line-height: 140%;
+}
+.oevelser_detaljer_container strong {
+  font-weight: 700;
+}
+
+iframe {
+  max-width: 100%;
+  margin: 0 auto;
+  height: auto;
+  aspect-ratio: 16/9;
+  margin-bottom: 2%;
+}
+/*  Her styles footer */
 footer {
   background-color: #fff;
 }

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GymGuide</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/generel.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header id="toppen">
+      <nav>
+        <div class="logo">
+          <a href="index.html"><img src="ikoner/logo_hvid.svg" alt="GYMGUIDE logo" /></a>
+
+          <a class="logotekst" href="index.html">GYMGUIDE</a>
+        </div>
+
+        <ul class="navlinks">
+          <li>
+            <a href="oevelser.html">Øvelser</a>
+          </li>
+          <li>
+            <a href="bliv_medlem.html">Bliv meddlem</a>
+          </li>
+          <li>
+            <a href="kost.html">Kost</a>
+          </li>
+          <li>
+            <a href="om_os.html">Om os</a>
+          </li>
+        </ul>
+
+        <button>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </nav>
+    </header>
+    <main>
+      <section class="oevelser_detaljer_container">
+        <article class="oevelse_container oevelse_detaljer">
+          <iframe " src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <h3 class="navn"></h3>
+
+          <p class="muskelgruppe"></p>
+          <p class="fordele_ved"></p>
+          <p class="saadan_laver_du"></p>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <a class="til_top" href="#toppen"><img src="ikoner/pil_op_sort.svg" alt="" /></a>
+      <section class="footer_col">
+        <article>
+          <h3>Følg med:</h3>
+          <div class="social_media">
+            <img src="ikoner/facebook_logo.svg" alt="facebook logo" />
+            <img src="ikoner/instagram_logo.svg" alt="Instagram logo" />
+            <img src="ikoner/twitter_logo.svg" alt="Twitter logo" />
+          </div>
+        </article>
+        <article>
+          <h3>Åbningstider:</h3>
+          <p>Man-fre 10-17 lør-søn lukket.</p>
+        </article>
+        <article>
+          <h3>Kontakt:</h3>
+          <p>Tlf: 62874288</p>
+          <p>Mail: gymguide@mail.dk</p>
+        </article>
+      </section>
+
+      <p class="copyright">© GYMGUIDE 2022</p>
+    </footer>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const id = urlParams.get("id");
+      console.log(id);
+      let oevelse;
+
+      const urlOevelser = "https://traeningsoevelser-172f.restdb.io/rest/oevelser/" + id;
+      const option = {
+        headers: {
+          "x-apikey": "631f0ecefdc15b0265f17313",
+        },
+      };
+
+      async function hentData() {
+        const respons = await fetch(urlOevelser, option);
+        oevelse = await respons.json();
+        console.log(oevelse);
+        vis();
+      }
+
+      function vis() {
+        document.querySelector("article iframe").src = "https://www.youtube.com/embed/q1fCgfieNEs";
+        // console.log(oevelse.billednavn);
+        document.querySelector(".navn").textContent = oevelse.oevelse_navn;
+        document.querySelector(".muskelgruppe").innerHTML =  "<strong>Muskelgruppe |  </strong>"  + oevelse.muskelgruppe;
+
+        // document.querySelector(".muskelgruppe").textContent = "Muskelgruppe | " + oevelse.muskelgruppe;
+        document.querySelector(".fordele_ved").innerHTML = " <strong>Fordele ved " + oevelse.oevelse_navn + ":</strong> <br>" + oevelse.fordele_ved;
+        document.querySelector(".saadan_laver_du").innerHTML = "<strong>Sådan laver du " + oevelse.oevelse_navn + ": </strong> <br>" + oevelse.saadan_laver_du;
+      }
+
+      hentData();
+    </script>
+    <script src="javascript/script.js"></script>
+  </body>
+</html>

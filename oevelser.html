@@ -6,33 +6,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GymGuide</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/generel.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <a href="index.html"><img src="ikoner/logo_hvid.svg" alt="GYMGUIDE logo" /></a><a href="">GYMGUIDE</a>
-      </div>
+    <header id="toppen">
       <nav>
-        <div class="navlinks">
-          <ul>
-            <li><a href="oevelser.html">Øvelser</a></li>
-            <li><a href="bliv_medlem.html">Bliv meddlem</a></li>
-            <li><a href="kost.html">Kost</a></li>
-            <li><a href="om_os.html">Om os</a></li>
-          </ul>
+        <div class="logo">
+          <a href="index.html"><img src="ikoner/logo_hvid.svg" alt="GYMGUIDE logo" /></a>
+
+          <a class="logotekst" href="index.html">GYMGUIDE</a>
         </div>
-        <div class="burgermenu">
+
+        <ul class="navlinks">
+          <li>
+            <a href="oevelser.html">Øvelser</a>
+          </li>
+          <li>
+            <a href="bliv_medlem.html">Bliv meddlem</a>
+          </li>
+          <li>
+            <a href="kost.html">Kost</a>
+          </li>
+          <li>
+            <a href="om_os.html">Om os</a>
+          </li>
+        </ul>
+
+        <button>
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
-        </div>
+        </button>
       </nav>
     </header>
+    <main>
+      <h1>Øvelser</h1>
+      <section class="kategorier">
+        <ul>
+          <li>
+            <button data-kategori="alle" class="valgt"><p>Alle</p></button>
+          </li>
+          <li>
+            <button data-kategori="arme"><p>Arme</p></button>
+          </li>
+          <li>
+            <button data-kategori="ben"><p>Ben</p></button>
+          </li>
+          <li>
+            <button data-kategori="bryst"><p>Bryst</p></button>
+          </li>
+          <li>
+            <button data-kategori="core"><p>Core</p></button>
+          </li>
+          <li>
+            <button data-kategori="ryg"><p>Ryg</p></button>
+          </li>
+        </ul>
+      </section>
+      <section class="oevelser_grid"></section>
+    </main>
+
+    <template>
+      <article class="oevelse_container">
+        <img src="" alt="" />
+        <h3 class="navn"></h3>
+        <div class="muskelgruppe_og_knap">
+          <p class="muskelgruppe"></p>
+          <button>Se mere</button>
+        </div>
+      </article>
+    </template>
     <footer>
-      <a href=""><img src="ikoner/pil_op_sort.svg" alt="" /></a>
+      <a class="til_top" href="#toppen"><img src="ikoner/pil_op_sort.svg" alt="" /></a>
       <section class="footer_col">
         <article>
           <h3>Følg med:</h3>
@@ -47,14 +95,70 @@
           <p>Man-fre 10-17 lør-søn lukket.</p>
         </article>
         <article>
-          <h3>Kontakt</h3>
+          <h3>Kontakt:</h3>
           <p>Tlf: 62874288</p>
           <p>Mail: gymguide@mail.dk</p>
         </article>
       </section>
 
-      <p>© GYMGUIDE 2022</p>
+      <p class="copyright">© GYMGUIDE 2022</p>
     </footer>
+
+    <script>
+      const urlOevelser = "https://traeningsoevelser-172f.restdb.io/rest/oevelser";
+      const option = {
+        headers: {
+          "x-apikey": "631f0ecefdc15b0265f17313",
+        },
+      };
+      const template = document.querySelector("template").content;
+      const main = document.querySelector(".oevelser_grid");
+      const filterKnapper = document.querySelectorAll("ul li button");
+      filterKnapper.forEach((knap) => knap.addEventListener("click", filtrerOvelser));
+      let oevelser;
+      let filter = "alle";
+
+      function filtrerOvelser() {
+        filter = this.dataset.kategori;
+        // console.log(filter);
+        document.querySelector(".valgt").classList.remove("valgt");
+        this.classList.add("valgt");
+
+        vis();
+      }
+
+      async function hentData() {
+        const respons = await fetch(urlOevelser, option);
+        oevelser = await respons.json();
+        console.log(oevelser);
+        vis();
+      }
+
+      function vis() {
+        main.textContent = "";
+        oevelser.forEach((oevelse) => {
+          if (filter == oevelse.type || filter == "alle") {
+            const klon = template.cloneNode(true);
+            klon.querySelector("img").src = "billeder/tester_oevelse.jpg";
+            // console.log(oevelse.billednavn);
+            klon.querySelector(".navn").textContent = oevelse.oevelse_navn;
+            klon.querySelector(".muskelgruppe").textContent = "Muskelgruppe | " + oevelse.muskelgruppe;
+
+            klon.querySelector("article").addEventListener("click", () => visDetaljer(oevelse));
+
+            main.appendChild(klon);
+          }
+        });
+      }
+
+      function visDetaljer(oevelsen) {
+        console.log(oevelsen.oevelse_navn);
+
+        location.href = "oevelse_detaljer.html?id=" + oevelsen._id;
+      }
+
+      hentData();
+    </script>
 
     <script src="javascript/script.js"></script>
   </body>
