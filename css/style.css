@@ -1,14 +1,15 @@
-* {
-  --color_1: #2f3635;
-  --color_2: #4c615f;
-  --color_3: #53ada4;
-
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Roboto Condensed", sans-serif;
-  color: white;
+h1 {
+  font-size: var(--overskrift_1);
 }
+
+h2 {
+  font-size: var(--overskrift_2);
+}
+
+h3 {
+  font-size: var(--overskrift_3);
+}
+
 body {
   background-color: var(--color_1);
 }
@@ -17,7 +18,14 @@ header {
   background-color: var(--color_3);
 }
 
-header img {
+nav {
+  display: flex;
+  justify-content: space-between;
+  /* margin: 0 5%; */
+  padding: 2% 5%;
+}
+
+.logo img {
   max-width: 12.5%;
 }
 .logotekst {
@@ -25,34 +33,200 @@ header img {
   font-weight: 700;
 }
 
+.navlinks {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color_1);
+  top: 7.2%;
+  left: 100%;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  /* border: solid red 1px; */
+}
+
+.navlinks li {
+  margin: 15% auto;
+}
+li {
+  list-style: none;
+}
+.navlinks li a {
+  font-size: 3rem;
+}
+
 a {
   text-decoration: none;
   color: white;
 }
 
-nav ul {
-  /* display: none; */
-}
-
-.burgermenu {
+nav button {
+  background: none;
+  border: none;
   cursor: pointer;
 }
 
 .bar {
   display: block;
   width: 40px;
-  height: 3px;
-  margin: 5px;
+  height: 4px;
+  margin: 7px;
   transition: all 0.3s ease-in-out;
   background-color: white;
   border-radius: 12px;
 }
 
+.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.active .bar:nth-child(1) {
+  transform: translateY(11px) rotate(45deg);
+}
+.active .bar:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+.navlinks.active {
+  left: 0;
+}
+
+.splashbillede {
+  background-image: url(../billeder/splashbillede.webp);
+  background-size: 170%;
+  background-repeat: no-repeat;
+  background-position: 58% 80%;
+}
+
+.splashbillede article {
+  /* margin: 10% auto; */
+  padding: 15% 0;
+}
+.splashbillede h1 {
+  margin: 40% auto 5%;
+  text-align: center;
+}
+
+.splashbillede h2 {
+  text-align: center;
+  font-weight: 100;
+}
+
+.pilned {
+  margin: 15% 0 5%;
+}
+
+.pilned a {
+  display: block;
+}
+
+.pilned img {
+  max-width: 30%;
+  display: block;
+  margin: 0 auto;
+}
+
+.grid_1 article {
+  margin: 25% 0;
+}
+
+.grid_1 article img {
+  margin: 0 auto -10%;
+  max-width: 70%;
+  display: block;
+}
+
+.grid_1 article h3 {
+  text-align: center;
+  margin: 10%;
+}
+.koncept_tekst {
+  margin: 40% 5% 0;
+}
+.koncept_tekst h1 {
+  text-align: center;
+  margin: 10% auto;
+}
+
+.koncept_tekst p {
+  margin: 2% auto;
+}
+
+.grid_1_3 {
+  margin: 20% auto;
+}
+.grid_1_3 article {
+  margin: 10% 7%;
+  aspect-ratio: 1/1;
+  display: grid;
+}
+
+.oevelser {
+  background-image: url(../billeder/loeber_paa_trapper.webp);
+  background-size: 100%;
+  background-position: 51% 70%;
+}
+
+.kost {
+  background-image: url(../billeder/morgenmad.webp);
+  background-size: 210%;
+  background-position: 27% 65%;
+}
+
+.coaching {
+  background-image: url(../billeder/loeber_sammen.webp);
+  background-size: 160%;
+  background-position: 52% 70%;
+}
+.til_andre_sider {
+  columns: 1/1;
+  place-self: end center;
+  background-color: var(--color_3);
+  padding: 2% 14%;
+}
 footer {
   background-color: #fff;
+}
+footer article {
+  margin: 20% 5%;
+}
+
+.til_top {
+  padding: 20% 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.til_top img {
+  max-width: 40%;
 }
 
 footer h3,
 footer p {
   color: black;
+  text-align: center;
+}
+
+footer h3 {
+  margin: 5% 0;
+}
+
+footer p {
+  margin: 5% 0;
+}
+
+.social_media {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social_media img {
+  max-width: 20%;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  font-weight: 100;
 }

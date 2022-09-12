@@ -6,84 +6,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GymGuide</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/generel.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <a href="index.html"><img src="ikoner/logo_hvid.svg" alt="GYMGUIDE logo" /></a><a class="logotekst" href="">GYMGUIDE</a>
-      </div>
+    <header id="toppen">
       <nav>
-        <div class="navlinks">
-          <ul>
-            <li><a href="oevelser.html">Øvelser</a></li>
-            <li><a href="bliv_medlem.html">Bliv meddlem</a></li>
-            <li><a href="kost.html">Kost</a></li>
-            <li><a href="om_os.html">Om os</a></li>
-          </ul>
+        <div class="logo">
+          <a href="index.html"><img src="ikoner/logo_hvid.svg" alt="GYMGUIDE logo" /></a>
+
+          <a class="logotekst" href="">GYMGUIDE</a>
         </div>
-        <div class="burgermenu">
+
+        <ul class="navlinks">
+          <li>
+            <a href="oevelser.html">Øvelser</a>
+          </li>
+          <li>
+            <a href="bliv_medlem.html">Bliv meddlem</a>
+          </li>
+          <li>
+            <a href="kost.html">Kost</a>
+          </li>
+          <li>
+            <a href="om_os.html">Om os</a>
+          </li>
+        </ul>
+
+        <button>
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
-        </div>
+        </button>
       </nav>
     </header>
     <section class="splashbillede">
       <article>
-        <h1></h1>
-        <h2></h2>
+        <h1>Kom godt fra start!</h1>
+        <h2>Lær de RIGTIGE øvelser!</h2>
         <div class="pilned">
-          <a href=""><img src="ikoner/hvid_pil_ned.svg" alt="hvid pil der peger nedad" /></a>
+          <a href="#top_of_section"><img src="ikoner/hvid_pil_ned.svg" alt="hvid pil der peger nedad" /></a>
         </div>
       </article>
     </section>
     <main>
-      <section>
-        <article><h2></h2></article>
+      <section id="top_of_section">
         <section class="grid_1">
           <article>
             <img src="ikoner/haanvaegt.svg" alt="håndvægt ikon" />
-            <p>Kvalitetsudstyr</p>
+            <h3>Kvalitetsudstyr</h3>
           </article>
           <article>
             <img src="ikoner/bruser.svg" alt="bruser ikon" />
-            <p>Adgang til bad</p>
+            <h3>Adgang til bad</h3>
           </article>
           <article>
             <img src="ikoner/hjerte.svg" alt="hjerte ikon" />
-            <p>Monitorering af dit helbred</p>
+            <h3>Monitorering af dit helbred</h3>
           </article>
           <article>
             <img src="ikoner/vand.svg" alt="dråbe ikoner" />
-            <p>Iskoldt drikkevand</p>
+            <h3>Iskoldt drikkevand</h3>
           </article>
         </section>
       </section>
-      <section>
+      <section class="koncept_tekst">
         <h1>Coaching, Øvelser og kost</h1>
 
-        <h3>Alt samlet et sted</h3>
+        <h2>Alt samlet et sted</h2>
 
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
       </section>
       <section class="grid_1_3">
-        <article>
-          <div class="til_andre_sider"><h3>Øvelser</h3></div>
-        </article>
-        <article>
-          <div class="til_andre_sider"><h3>Kost</h3></div>
-        </article>
-        <article>
-          <div class="til_andre_sider"><h3>Coaching</h3></div>
-        </article>
+        <a href="oevelser.html">
+          <article class="oevelser">
+            <div class="til_andre_sider"><h3>Øvelser</h3></div>
+          </article>
+        </a>
+
+        <a href="kost.html">
+          <article class="kost">
+            <div class="til_andre_sider"><h3>Kost</h3></div>
+          </article>
+        </a>
+
+        <a href="bliv_medlem.html">
+          <article class="coaching">
+            <div class="til_andre_sider"><h3>Coaching</h3></div>
+          </article>
+        </a>
       </section>
     </main>
 
     <footer>
-      <a href=""><img src="ikoner/pil_op_sort.svg" alt="" /></a>
+      <a class="til_top" href="#toppen"><img src="ikoner/pil_op_sort.svg" alt="" /></a>
       <section class="footer_col">
         <article>
           <h3>Følg med:</h3>
@@ -98,13 +116,13 @@
           <p>Man-fre 10-17 lør-søn lukket.</p>
         </article>
         <article>
-          <h3>Kontakt</h3>
+          <h3>Kontakt:</h3>
           <p>Tlf: 62874288</p>
           <p>Mail: gymguide@mail.dk</p>
         </article>
       </section>
 
-      <p>© GYMGUIDE 2022</p>
+      <p class="copyright">© GYMGUIDE 2022</p>
     </footer>
 
     <script src="javascript/script.js"></script>

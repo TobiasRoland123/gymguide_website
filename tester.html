@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="index.html"><img src="ikoner/logo_hvid.svg" alt="GYMGUIDE logo" /></a>
+        <div class="logotekst">
+          <a href="">GYMGUIDE</a>
+        </div>
+      </div>
+      <button>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </nav>
+
+    <style>
+      body {
+        background-color: #2f3635;
+        color: white;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+        height: 0;
+      }
+
+      nav {
+        display: flex;
+        margin: 0 auto;
+      }
+      .logo {
+        display: grid;
+        grid-template-columns: 10% 1fr;
+      }
+      .logotekst {
+        display: block;
+        align-self: center;
+      }
+      .logo img {
+        max-width: 100%;
+        align-self: center;
+      }
+
+      button {
+        background: none;
+        border: none;
+      }
+
+      .bar {
+        display: block;
+        width: 40px;
+        height: 4px;
+        margin: 7px;
+        transition: all 0.3s ease-in-out;
+        background-color: white;
+        border-radius: 12px;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+html {
+  --color_1: #2f3635;
+  --color_2: #4c615f;
+  --color_3: #53ada4;
+  --overskrift_1: 5rem;
+  --overskrift_2: 3.125rem;
+  --overskrift_3: 1.563rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+  color: white;
+  scroll-behavior: smooth;
+  /* transition: all 0.3s ease-in-out; */
+}
+
+main {
+  max-width: 1200px;
+}
