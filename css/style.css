@@ -93,6 +93,10 @@ nav button {
   left: 0;
 }
 
+main {
+  margin: 0 auto;
+}
+
 .splashbillede {
   background-image: url(../billeder/splashbillede.webp);
   background-size: 170%;
