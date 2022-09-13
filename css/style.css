@@ -335,6 +335,7 @@ footer p {
   font-size: 0.8rem;
   font-weight: 100;
   margin: 0;
+  order: 3;
 }
 
 @media screen and (min-width: 530px) {
@@ -344,6 +345,24 @@ footer p {
 
   .oevelse_detaljer h3 {
     margin: 0;
+  }
+
+  .footer_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 2% 0;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+
+  .footer_container article {
+    order: 1;
+    margin: 0;
+  }
+
+  .til_top {
+    order: 2;
+    padding: 0;
   }
 }
 
