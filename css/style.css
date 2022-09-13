@@ -348,6 +348,21 @@ footer p {
 }
 
 @media screen and (min-width: 530px) {
+  .splashbillede {
+    background-size: 100%;
+    background-position: 58% 0%;
+  }
+
+  .splashbillede h1 {
+    margin: 10% auto 5%;
+  }
+
+  .pilned {
+    margin: 5% 0 35%;
+  }
+  .pilned img {
+    max-width: 20%;
+  }
   .kategorier ul {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -379,6 +394,20 @@ footer p {
   main > h1 {
     text-align: start;
     margin: 3% 5% 5%;
+  }
+  .splashbillede {
+    background-position: 58% 50%;
+  }
+
+  .splashbillede h1 {
+    margin: 0 auto 5%;
+  }
+  .pilned {
+    margin: 5% 0 15%;
+  }
+
+  .pilned img {
+    max-width: 10%;
   }
   .kategorier ul {
     grid-template-columns: repeat(6, 1fr);
