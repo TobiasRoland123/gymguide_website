@@ -1,0 +1,101 @@
+main {
+  padding-inline: 10px;
+  margin: 0 auto;
+}
+h1 {
+  text-align: center;
+  padding-block: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.omos_grid {
+  display: grid;
+  gap: 20px;
+}
+
+.coach {
+  display: grid;
+  background-color: rgba(0, 0, 0, 0.579);
+}
+
+.coach .omos_icons,
+img,
+h3,
+.coach p {
+  grid-area: 1/1;
+}
+
+.coach h3 {
+  place-self: start center;
+  padding-top: 15px;
+}
+
+.coach p {
+  place-self: center center;
+}
+
+.coach img {
+  width: 100%;
+  object-fit: cover;
+
+  z-index: -1;
+}
+
+.omos_icons {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  place-self: end center;
+  padding-bottom: 15px;
+}
+
+.omos_icons img {
+  width: 80%;
+}
+
+.omos_grid2 {
+  display: grid;
+
+  gap: 20px;
+  padding-block: 40px;
+  text-align: center;
+}
+
+.knap {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 590px) {
+  .omos_grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 900px) {
+  h1 {
+    text-align: left;
+  }
+
+  .omos_grid2 {
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+  }
+
+  h2 {
+    text-align: left;
+  }
+
+  .order {
+    order: -1;
+  }
+}
+
+@media (min-width: 1200px) {
+  .omos_grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
