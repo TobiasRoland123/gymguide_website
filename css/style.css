@@ -214,6 +214,10 @@ main h1 {
   margin: 5%;
 }
 
+.kategorier button:hover {
+  color: var(--color_1);
+}
+
 .kategorier .valgt {
   background-color: var(--color_2);
 }
@@ -232,6 +236,11 @@ main h1 {
 
 .oevelse_container img {
   max-width: 100%;
+  background-color: #fff;
+  height: 220px;
+  padding: 5%;
+  aspect-ratio: 16/9;
+  border-radius: 7px;
 }
 
 .oevelse_container h3 {
