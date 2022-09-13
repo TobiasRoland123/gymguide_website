@@ -220,10 +220,13 @@ main h1 {
 
 .oevelser_grid {
   margin: 10% 5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 0 4%;
 }
 .oevelse_container {
   display: grid;
-  margin: 20% auto 30%;
+  margin: 10% auto 30%;
   cursor: pointer;
 }
 
@@ -239,6 +242,10 @@ main h1 {
   font-weight: 100;
   margin: 3% 0;
 }
+
+.oevelse_container strong {
+  font-weight: 700;
+}
 .muskelgruppe_og_knap {
   display: flex;
   justify-content: space-between;
@@ -250,6 +257,8 @@ main h1 {
   cursor: pointer;
   min-width: 100px;
   padding: 1%;
+  min-height: 40px;
+  place-self: end end;
 }
 
 .oevelser_detaljer_container {
@@ -268,8 +277,14 @@ main h1 {
   font-weight: 700;
 }
 
+.oevelse_detaljer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2%;
+}
+
 iframe {
-  max-width: 100%;
+  width: 100%;
   margin: 0 auto;
   height: auto;
   aspect-ratio: 16/9;
@@ -319,8 +334,32 @@ footer p {
 .copyright {
   font-size: 0.8rem;
   font-weight: 100;
+  margin: 0;
 }
 
-footer .copyright p {
-  margin: 0;
+@media screen and (min-width: 530px) {
+  .kategorier ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .oevelse_detaljer h3 {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 830px) {
+  main > h1 {
+    text-align: start;
+    margin: 3% 5% 5%;
+  }
+  .kategorier ul {
+    grid-template-columns: repeat(6, 1fr);
+
+    margin: 0 auto;
+    max-width: 900px;
+  }
+
+  .oevelser_grid {
+    margin: 2% 5%;
+  }
 }
