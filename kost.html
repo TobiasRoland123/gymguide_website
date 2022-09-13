@@ -6,12 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GymGuide</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/kost.css" />
+    <link rel="stylesheet" href="css/generel.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <header>
+    <div class="header">
+      <nav>
+        <img src="ikoner/logo_hvid.svg" class="logo">
+      </nav>
+      <ul class="nav-links">
+        <li><a href="">Øvelser</a></li>
+        <li><a href="">Bliv Medlem</a></li>
+        <li><a href="">Kost</a></li>
+        <li><a href="">Om Os</a></li>
+      </ul>
+    </div>
+    <!-- <header>
       <div class="logo">
         <a href="index.html"><img src="ikoner/logo_hvid.svg" alt="GYMGUIDE logo" /></a><a href="">GYMGUIDE</a>
       </div>
@@ -29,10 +42,47 @@
           <span class="bar"></span>
           <span class="bar"></span>
         </div>
-      </nav>
-    </header>
-    <main>
+      </nav> -->
       
+        <!-- <h2>Alle</h2> Tilføjet h2-overskrift til at vise valgt filter -->
+    
+        <!-- <nav id="menu"> -->
+    
+            <!-- knapper til at trykke på. kanpperne skal være tilknyttet en værdi, som filtervariablen sættes lig med. 
+            Til det bruges en data-attribut, i denne opgave en data-kategori.
+            den ville så kunne tilgås i javascript med dataset.kategori
+            
+            data attributterne er sat til det data, der findes i backenden. "alle", "sideorders" osv.
+    
+            i DOM'en er det Alle-knappen, som skal have klassen 'valgt'. 
+         -->
+    
+            <!-- <button data-type="alle" class="valgt">Alle</button>
+            <button data-type="vegetar">Vegetar</button>
+            <button data-type="low-carb">Low Carb</button>
+            <button data-type="high protein">High Protein</button>
+            
+            </nav>
+    
+    
+    
+    
+    </header> -->
+    <main>
+      <h1>Opskrifter</h1>
+      <section class="container"></section>
+
+      <template>
+        <article id="ret">
+    
+    
+            <img src="" alt="" class="billede">
+            <h3 class="navn"></h2>
+            
+            <p class="maaltid"></p>
+            
+            </article>
+        </template>
     </main>
     <footer>
       <a href=""><img src="ikoner/pil_op_sort.svg" alt="" /></a>
@@ -59,6 +109,7 @@
       <p>© GYMGUIDE 2022</p>
     </footer>
 
-    <script src="javascript/script.js"></script>
+    <!-- <script src="javascript/script.js"></script> -->
+    <script src="javascript/kost.js"></script>
   </body>
 </html>

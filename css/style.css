@@ -16,24 +16,34 @@ body {
 
 header {
   background-color: var(--color_3);
+  height: 100vh;
+  width: 100%;
+  padding: 0 8%;
+  position: relative; 
 }
+
 
 nav {
   display: flex;
   justify-content: space-between;
-  /* margin: 0 5%; */
-  padding: 2% 5%;
+  align-items: center;
 }
 
-.logo img {
+
+.logo{
+  width: 140px;
+}
+
+/* .logo img {
   max-width: 12.5%;
 }
 .logotekst {
   font-size: 1.8rem;
   font-weight: 700;
-}
+} */
 
-.navlinks {
+.nav-links {
+  padding: 28px 0;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -47,14 +57,15 @@ nav {
   /* border: solid red 1px; */
 }
 
-.navlinks li {
-  margin: 15% auto;
+.nav-links li {
+  display: inline-block;
+  margin: 0 15px;
 }
-li {
-  list-style: none;
-}
-.navlinks li a {
-  font-size: 3rem;
+
+.nav-links li a {
+  text-decoration: none;
+  padding: 5px 0;
+
 }
 
 a {
@@ -89,7 +100,7 @@ nav button {
   transform: translateY(-10px) rotate(-45deg);
 }
 
-.navlinks.active {
+.nav-links.active {
   left: 0;
 }
 
