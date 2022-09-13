@@ -142,7 +142,7 @@
             klon.querySelector("img").src = "billeder/tester_oevelse.jpg";
             // console.log(oevelse.billednavn);
             klon.querySelector(".navn").textContent = oevelse.oevelse_navn;
-            klon.querySelector(".muskelgruppe").textContent = "Muskelgruppe | " + oevelse.muskelgruppe;
+            klon.querySelector(".muskelgruppe").innerHTML = "<strong> Muskelgruppe  </strong> | " + oevelse.muskelgruppe;
 
             klon.querySelector("article").addEventListener("click", () => visDetaljer(oevelse));
 
