@@ -64,12 +64,18 @@ const myHeaders = {
         if(filter == ret.type || filter =="alle" ) { //udbyg if-sætningen: hvis filter er lig med valuen af ret.kategori (vegetar, low carb og high protein) eller hvis filter er lig med 'alle'
             const klon = template.cloneNode(true).content; 
             klon.querySelector(".navn").textContent = ret.navn;
-            klon.querySelector(".maaltid").textContent = ret.maaltid;
+            klon.querySelector(".maaltid").innerHTML = " <strong> Måltid </strong> | " + ret.maaltid;
             klon.querySelector("img").src = "kost_bilelder/" + ret.billedenavn
+
+            klon.querySelector("article").addEventListener("click", () => visDetaljer(ret));
             container.appendChild(klon);
 
         }
-
-
     })
+    
 }
+
+function visDetaljer(ret) {
+      console.log(ret.navn);
+      location.href = "kost_detaljer.html?id=" + ret._id;
+    }

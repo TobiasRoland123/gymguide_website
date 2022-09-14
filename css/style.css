@@ -293,6 +293,35 @@ main h1 {
   list-style: none;
 }
 
+.ret_detaljer_container {
+  margin: 0 5%;
+}
+
+.ret_detaljer {
+  display: grid;
+grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+gap: 2%;
+}
+
+.ret_container {
+  margin: 10% auto 30%;
+cursor: pointer;
+}
+
+.ret_container p {
+  font-weight: 100;
+margin: 3% 0;
+}
+
+.billede {
+  width: 100%;
+margin: 0 auto;
+  margin-bottom: 0px;
+height: auto;
+aspect-ratio: 16/9;
+margin-bottom: 2%;
+}
+
 .kategorier_kost button {
   background-color: var(--color_3);
   border: none;
@@ -363,9 +392,10 @@ main h1 {
   min-height: 40px;
   place-self: end end;
 }
-.ret {
-  display: flex;
-  flex-direction: column;
+#ret {
+  display: grid;
+  margin: 10% auto 30%;
+  cursor: pointer;
 }
 
 .maaltid_og_knap button {
