@@ -407,6 +407,7 @@ main h1 {
 .maaltid_og_knap {
   display: flex;
   justify-content: space-between;
+  margin: 10px 0;
 }
 .oevelse_container button {
   background-color: var(--color_3);
