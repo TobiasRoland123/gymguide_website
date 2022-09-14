@@ -181,6 +181,10 @@ main h1 {
   margin: 15% 0 5%;
 }
 
+.button {
+  display: none;
+}
+
 .pilned a {
   display: block;
 }
@@ -189,11 +193,6 @@ main h1 {
   max-width: 30%;
   display: block;
   margin: 0 auto;
-}
-
-.grid_1 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
 }
 
 .grid_1 article {
@@ -415,6 +414,11 @@ footer p {
   .splashbillede {
     background-size: 170%;
     background-position: 50% 50%;
+  }
+
+  .grid_1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .kategorier ul {

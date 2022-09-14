@@ -12,36 +12,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <header id="toppen">
-      <nav>
-        <div class="logo">
-          <a href="index.html"><img src="ikoner/LOGO.svg" alt="GYMGUIDE logo" /></a>
-
-          <a class="logotekst" href="index.html">GYMGUIDE</a>
-        </div>
-
-        <ul class="navlinks">
-          <li>
-            <a href="oevelser.html">Øvelser</a>
-          </li>
-          <li>
-            <a href="bliv_medlem.html">Bliv meddlem</a>
-          </li>
-          <li>
-            <a href="kost.html">Kost</a>
-          </li>
-          <li>
-            <a href="om_os.html">Om os</a>
-          </li>
-        </ul>
-
-        <button>
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
-      </nav>
-    </header>
+    <nav id="toppen">
+      <div>
+        <a href="index.html"><img src="ikoner/LOGO.svg" class="logo" /> </a>
+      </div>
+      <input type="checkbox" id="click" />
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a href="oevelser.html">Øvelser</a></li>
+        <li><a href="bliv_medlem.html">Bliv medlem</a></li>
+        <li><a href="kost.html">Kost</a></li>
+        <li><a class="active" href="om_os.html">Om os</a></li>
+      </ul>
+    </nav>
     <main>
       <section class="oevelser_detaljer_container">
         <article class="oevelse_container oevelse_detaljer">
