@@ -204,6 +204,7 @@ main h1 {
 
 .button {
   display: none;
+  text-decoration: none;
 }
 
 .pilned a {
@@ -321,27 +322,27 @@ main h1 {
 
 .ret_detaljer {
   display: grid;
-grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-gap: 2%;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2%;
 }
 
 .ret_container {
   margin: 10% auto 30%;
-cursor: pointer;
+  cursor: pointer;
 }
 
 .ret_container p {
   font-weight: 100;
-margin: 3% 0;
+  margin: 3% 0;
 }
 
 .billede {
   width: 100%;
-margin: 0 auto;
+  margin: 0 auto;
   margin-bottom: 0px;
-height: auto;
-aspect-ratio: 16/9;
-margin-bottom: 2%;
+  height: auto;
+  aspect-ratio: 16/9;
+  margin-bottom: 2%;
 }
 
 .kategorier_kost button {
@@ -352,7 +353,6 @@ margin-bottom: 2%;
   padding: 8% 0;
   margin: 5%;
   cursor: pointer;
-  
 }
 
 .kategorier_kost button:hover {
