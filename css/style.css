@@ -284,6 +284,34 @@ main h1 {
   background-color: var(--color_2);
 }
 
+/* kategoribar til kost siden */
+.kategorier_kost ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  margin: 0 15%;
+  list-style: none;
+}
+
+.kategorier_kost button {
+  background-color: var(--color_3);
+  border: none;
+  border-radius: 7px;
+  min-width: 100px;
+  padding: 8% 0;
+  margin: 5%;
+  cursor: pointer;
+  
+}
+
+.kategorier_kost button:hover {
+  color: var(--color_1);
+}
+
+.kategorier_kost .valgt {
+  background-color: var(--color_2);
+}
+
 .oevelser_grid {
   margin: 10% 5%;
   display: grid;
@@ -321,7 +349,26 @@ main h1 {
   display: flex;
   justify-content: space-between;
 }
+.maaltid_og_knap {
+  display: flex;
+  justify-content: space-between;
+}
 .oevelse_container button {
+  background-color: var(--color_3);
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  min-width: 100px;
+  padding: 1%;
+  min-height: 40px;
+  place-self: end end;
+}
+.ret {
+  display: flex;
+  flex-direction: column;
+}
+
+.maaltid_og_knap button {
   background-color: var(--color_3);
   border: none;
   border-radius: 7px;
@@ -417,6 +464,9 @@ footer p {
 
   .kategorier ul {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .kategorier_kost ul {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .oevelse_detaljer h3 {

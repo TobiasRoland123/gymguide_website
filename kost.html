@@ -34,18 +34,40 @@
 
     <main>
       <h1>Opskrifter</h1>
+      <section class="kategorier_kost">
+        <ul>
+          <li>
+            <button data-type="alle" class="valgt"><p>Alle</p></button>
+          </li>
+          <li>
+            <button data-type="low-carb"><p>Low Carb</p></button>
+          </li>
+          <li>
+            <button data-type="vegetar"><p>Vegetar</p></button>
+          </li>
+          <li>
+            <button data-type="high protein"><p>High Protein</p></button>
+          </li>
+          
+        </ul>
+      </section> 
       <section class="container"></section>
 
       <template>
         <article id="ret">
-    
-    
+          <div>
             <img src="" alt="" class="billede">
             <h3 class="navn"></h2>
+          </div>
             
-            <p class="maaltid"></p>
-            
+              <div class="maaltid_og_knap">
+                <p class="maaltid">
+                  <strong>Måltid</strong>
+                </p>
+                <button>Se mere</button>
+              </div>
             </article>
+            
         </template>
     </main>
     <footer>
@@ -75,6 +97,7 @@
     </footer>
 
     <!-- <script src="javascript/script.js"></script> -->
+   
     <script src="javascript/kost.js"></script>
   </body>
 </html>
