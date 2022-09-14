@@ -10,29 +10,25 @@
     <link rel="stylesheet" href="css/om_os.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <a href="index.html"><img src="ikoner/LOGO.svg" alt="GYMGUIDE logo" /></a><a href="">GYMGUIDE</a>
+    <nav>
+      <div>
+        <a href="index.html"><img src="ikoner/LOGO.svg" class="logo"> </a>
       </div>
-      <nav>
-        <div class="navlinks">
-          <ul>
-            <li><a href="oevelser.html">Øvelser</a></li>
-            <li><a href="bliv_medlem.html">Bliv meddlem</a></li>
-            <li><a href="kost.html">Kost</a></li>
-            <li><a href="om_os.html">Om os</a></li>
-          </ul>
-        </div>
-        <div class="burgermenu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </nav>
-    </header>
+      <input type="checkbox" id="click">
+      <label for="click" class="menu-btn">
+      <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a   href="oevelser.html">Øvelser</a></li>
+        <li><a  href="bliv_medlem.html">Bliv medlem</a></li>
+        <li><a  href="kost.html">Kost</a></li>
+        <li><a class="active" href="om_os.html">Om os</a></li>
+     </ul>
+   </nav> 
     <main>
       <h1>Mød vores team</h1>
       <section class="omos_grid">
