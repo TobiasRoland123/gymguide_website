@@ -26,33 +26,31 @@ header {
 /* 
 CSS til navbaren */
 
-
-nav{
+nav {
   display: flex;
   height: 90px;
   width: 100%;
-  background: #53ADA4;
+  background: #53ada4;
   align-items: center;
   justify-content: space-between;
   padding: 0 50px 0 100px;
   flex-wrap: wrap;
 }
-nav .logo{
+nav .logo {
   color: #fff;
   width: 200px;
-    cursor: pointer;
-    padding: 10px 0;
-  
+  cursor: pointer;
+  padding: 10px 0;
 }
-nav ul{
+nav ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
 }
-nav ul li{
+nav ul li {
   margin: 0 5px;
 }
-nav ul li a{
+nav ul li a {
   color: #f2f2f2;
   text-decoration: none;
   font-size: 18px;
@@ -63,35 +61,35 @@ nav ul li a{
   /* transition: all 0.3s ease; */
 }
 nav ul li a.active,
-nav ul li a:hover{
-  color: #2F3635;
+nav ul li a:hover {
+  color: #2f3635;
 }
-nav .menu-btn i{
+nav .menu-btn i {
   color: #fff;
   font-size: 22px;
   cursor: pointer;
   display: none;
 }
-input[type="checkbox"]{
+input[type="checkbox"] {
   display: none;
 }
-@media (max-width: 1000px){
-  nav{
+@media (max-width: 1000px) {
+  nav {
     padding: 0 40px 0 50px;
   }
 }
 @media (max-width: 920px) {
-  nav .menu-btn i{
+  nav .menu-btn i {
     display: block;
   }
-  #click:checked ~ .menu-btn i:before{
+  #click:checked ~ .menu-btn i:before {
     content: "\f00d";
   }
-  nav ul{
+  nav ul {
     position: absolute;
     top: 80px;
     left: -100%;
-    background: #2F615C;
+    background: #2f615c;
     height: 100vh;
     width: 100%;
     text-align: center;
@@ -99,29 +97,29 @@ input[type="checkbox"]{
     transition: all 0.3s ease;
     z-index: 1;
   }
-  #click:checked ~ ul{
+  #click:checked ~ ul {
     left: 0;
   }
-  nav ul li{
+  nav ul li {
     width: 100%;
     margin: 40px 0;
   }
-  nav ul li a{
+  nav ul li a {
     width: 100%;
     margin-left: -100%;
     display: block;
     font-size: 20px;
   }
-  #click:checked ~ ul li a{
+  #click:checked ~ ul li a {
     margin-left: 0px;
   }
   nav ul li a.active,
-  nav ul li a:hover{
+  nav ul li a:hover {
     background: none;
     color: var(--color_1);
   }
 }
-.content{
+.content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -132,7 +130,7 @@ input[type="checkbox"]{
   padding: 0 30px;
   color: #1b1b1b;
 }
-.content div{
+.content div {
   font-size: 40px;
   font-weight: 700;
 }
@@ -265,6 +263,10 @@ main h1 {
   grid-template-columns: repeat(2, 1fr);
   place-items: center;
   margin: 0 15%;
+}
+
+.kategorier ul li {
+  list-style-type: none;
 }
 
 .kategorier button {
