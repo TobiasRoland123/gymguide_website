@@ -18,7 +18,7 @@ img {
    margin:0 auto;
 }
 
-article {
+#ret {
     margin: 5px;
     padding: 5px;
     background-color: #2F3635;
@@ -51,53 +51,7 @@ h1 {
 
 
 
-#popup {
-    position: fixed; /*den står hvor den skal*/
-    top: 100px;
-    left: 250px;
-    width: 100%; /* fulde
-    height: 100%; /* Fulde højde */
-    /* overflow: scroll; */
-    display: none; /* gemt by default */
-    z-index: 1; /* ligger øverst på siden*/
-    
-  
-   
-}
 
-#popup article {
-    width: 50vw;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    
-    /* border-radius: 25px; */
-    background-color: white;
-    padding: 3rem;
-    border-color: solid black;
-    border: 3px solid #483E35;
-    color:#323232;
-   
-    
-    
-    
-}
-
-#popup article h3 p { 
-    top: 0;
-
-    
-}
-
-
-#luk {
-position: fixed;
-padding: 1em;
-font-size: 1.7em;
-font-weight: bolder;
-color: black;
-cursor: pointer;
-}
 
 
 
