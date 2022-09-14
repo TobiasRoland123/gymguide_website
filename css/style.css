@@ -181,6 +181,27 @@ main h1 {
   margin: 15% 0 5%;
 }
 
+.pilned_hop {
+  animation-name: pilned_hop_kf;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+@keyframes pilned_hop_kf {
+  0% {
+    transform: translatey(30%);
+  }
+  50% {
+    transform: translatey(0%);
+  }
+  100% {
+    transform: translatey(30%);
+  }
+}
+
 .button {
   display: none;
 }
