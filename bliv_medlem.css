@@ -66,8 +66,7 @@ img {
 label,
 input,
 textarea,
-select,
-button {
+select {
   display: block;
 }
 
@@ -89,6 +88,21 @@ input {
 textarea {
   width: 100%;
   margin-top: 1%;
+}
+
+.indsend {
+  background-color: var(--color_3);
+  border: none;
+  border-radius: 7px;
+  width: 70%;
+  padding: 10px 0;
+  margin: 5%;
+  justify-content: center;
+}
+
+.knap {
+  display: flex;
+  justify-content: center;
 }
 
 @media (min-width: 830px) {
