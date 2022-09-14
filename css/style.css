@@ -18,81 +18,120 @@ header {
   background-color: var(--color_3);
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  /* margin: 0 5%; */
-  padding: 2% 5%;
-}
+/* 
+CSS til navbaren */
 
-.logo img {
-  max-width: 12.5%;
-}
-.logotekst {
-  font-size: 1.8rem;
-  font-weight: 700;
-}
 
-.navlinks {
-  position: fixed;
+nav{
   display: flex;
-  flex-direction: column;
+  height: 90px;
   width: 100%;
-  height: 100%;
-  background-color: var(--color_1);
-  top: 7.2%;
-  left: 100%;
+  background: #53ADA4;
   align-items: center;
-  transition: all 0.3s ease-in-out;
-  /* border: solid red 1px; */
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
 }
-
-.navlinks li {
-  margin: 15% auto;
+nav .logo{
+  color: #fff;
+  width: 200px;
+    cursor: pointer;
+    padding: 10px 0;
+  
 }
-li {
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
 }
-.navlinks li a {
-  font-size: 3rem;
+nav ul li{
+  margin: 0 5px;
 }
-
-a {
+nav ul li a{
+  color: #f2f2f2;
   text-decoration: none;
-  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  /* border-radius: 10px; */
+  letter-spacing: 1px;
+  /* transition: all 0.3s ease; */
 }
-
-nav button {
-  background: none;
-  border: none;
+nav ul li a.active,
+nav ul li a:hover{
+  color: #2F3635;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
   cursor: pointer;
+  display: none;
 }
-
-.bar {
-  display: block;
-  width: 40px;
-  height: 4px;
-  margin: 7px;
-  transition: all 0.3s ease-in-out;
-  background-color: white;
-  border-radius: 12px;
+input[type="checkbox"]{
+  display: none;
 }
-
-.active .bar:nth-child(2) {
-  opacity: 0;
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
 }
-
-.active .bar:nth-child(1) {
-  transform: translateY(11px) rotate(45deg);
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    background: #2F615C;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: var(--color_1);
+  }
 }
-.active .bar:nth-child(3) {
-  transform: translateY(-10px) rotate(-45deg);
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  color: #1b1b1b;
 }
-
-.navlinks.active {
-  left: 0;
+.content div{
+  font-size: 40px;
+  font-weight: 700;
 }
-
+/* CSS til andet */
 main {
   margin: 0 auto;
 }
