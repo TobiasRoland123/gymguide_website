@@ -6,7 +6,6 @@ img {
     max-width: 100%;
      -webkit-filter: grayscale(100%);
     filter: grayscale(30%);
-    z-index: -1;
 } 
 
 .container {
