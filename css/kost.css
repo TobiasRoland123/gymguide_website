@@ -13,7 +13,6 @@ img {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
    /* padding: 50px;*/
    width:100%;
-   max-width:1000px;
    margin:0 auto;
 }
 
@@ -26,14 +25,6 @@ img {
 
 }
 
-h1 {
-    display: flex;
-    justify-content: left;
-    padding-top: 4rem;
-    font-size: 50px;
-    color:#FFFFFF;
-    
-}
 
 #menu {
    display: flex;
@@ -43,6 +34,10 @@ h1 {
    color: white;
    
    
+}
+
+.kategorier_kost {
+    margin: 30px 0;
 }
 
 
