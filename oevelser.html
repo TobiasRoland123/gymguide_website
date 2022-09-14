@@ -140,7 +140,7 @@
         oevelser.forEach((oevelse) => {
           if (filter == oevelse.type || filter == "alle") {
             const klon = template.cloneNode(true);
-            klon.querySelector("img").src = "billeder/tester_oevelse.jpg";
+            klon.querySelector("img").src = "oevelser_billeder/" + oevelse.billedenavn;
             // console.log(oevelse.billednavn);
             klon.querySelector(".navn").textContent = oevelse.oevelse_navn;
             klon.querySelector(".muskelgruppe").innerHTML = "<strong> Muskelgruppe  </strong> | " + oevelse.muskelgruppe;
