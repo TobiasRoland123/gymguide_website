@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GymGuide</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="bliv_medlem.css" />
+    <link rel="stylesheet" href="css/generel.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
@@ -31,6 +33,81 @@
         </div>
       </nav>
     </header>
+    <main>
+      <h1 class="bliv_medlem_h1">Vælg din plan</h1>
+      <section class="medlem_grid">
+        <article class="medlem">
+          <img src="/billeder/bliv_medlem.webp" alt="bliv medlem" />
+          <h2>Øvelser</h2>
+
+          <h3>99,- md</h3>
+          <ul>
+            <li><p>✔ Fri adgang til alle øvelser</p></li>
+          </ul>
+        </article>
+        <article class="medlem">
+          <img src="/billeder/bliv_medlem2.webp" alt="bliv medlem" />
+          <h2>Øvelser + personlig træner</h2>
+
+          <h3>199,- md</h3>
+          <ul>
+            <li><p>✔ Fri adgang til alle øvelser</p></li>
+            <li><p>✔ Mulighed for personlig konsultation</p></li>
+            <li><p>✔ Træningsprogram</p></li>
+          </ul>
+        </article>
+        <article class="medlem">
+          <img src="/billeder/bliv_medlem3.webp" alt="bliv medlem" />
+          <h2>Øvelser + personlig træner + kost</h2>
+
+          <h3>299,- md</h3>
+          <ul>
+            <li><p>✔ Fri adgang til alle øvelser</p></li>
+            <li><p>✔ Mulighed for personlig konsultation</p></li>
+            <li><p>✔ Træningsprogram</p></li>
+            <li><p>✔ Fri adgang til alle opskrifter</p></li>
+            <li><p>✔ Kostplan</p></li>
+          </ul>
+        </article>
+      </section>
+      <section class="medlem_grid_2">
+        <article class="medlem_text">
+          <h2>Det er okay at være i tvivl</h2>
+          <h3>uforpligtende samtale</h3>
+          <p>Det er okay at være i tvivl, og derfor tilbyder vi at du kvit og frit kan bestille en uforpligtende samtale, om dig, dine mål og hvilken plan der vil være passende. Udfyld formularen, så kan du forvente et opkald inden for få dage, så vi sammen kan få dig i mål med dine drømme.</p>
+        </article>
+
+        <article>
+          <div class="formular_text">
+            <h2>Send os en besked</h2>
+            <p>Udfyld kontaktformularen for at kontakte os. Vi glæder os til at høre fra dig.</p>
+          </div>
+
+          <form>
+            <div class="form-felt">
+              <label id="fnavn">Fornavn</label>
+              <input placeholder="fx. Stine" name="fname" type="text" />
+
+              <label id="anavn">Efternavn</label>
+              <input placeholder="fx. Hansen" name="aname" type="text" />
+
+              <label id="email">E-mail</label>
+              <input placeholder="fx. stine@mail.com" name="email" type="email" />
+
+              <label id="telefon">Telefon</label>
+              <input placeholder="fx. 12345678" name="telefon" type="tel" />
+
+              <label>
+                Besked (Valgfri)
+                <textarea name="Besked" rows="5" placeholder="skriv en besked"></textarea>
+              </label>
+
+              <button class="kategori">Indsend</button>
+            </div>
+          </form>
+        </article>
+      </section>
+    </main>
     <footer>
       <div class="footer_container">
         <a class="til_top" href="#toppen"><img src="ikoner/pil_op_sort.svg" alt="" /></a>
