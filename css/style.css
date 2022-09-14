@@ -265,13 +265,13 @@ main h1 {
 
 .kost {
   background-image: url(../billeder/morgenmad.webp);
-  background-size: 210%;
+  background-size: 100%;
   background-position: 27% 65%;
 }
 
 .coaching {
   background-image: url(../billeder/loeber_sammen.webp);
-  background-size: 160%;
+  background-size: 100%;
   background-position: 52% 70%;
 }
 .til_andre_sider {
