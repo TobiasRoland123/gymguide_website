@@ -37,7 +37,7 @@ ul {
 }
 .medlem h3 {
   place-self: end end;
-  background-color: #53ada4;
+  background-color: var(--color_3);
   margin-bottom: 160px;
   margin-right: 20px;
   padding: 5px 20px;
