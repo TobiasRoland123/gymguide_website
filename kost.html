@@ -9,66 +9,64 @@
     <link rel="stylesheet" href="css/kost.css" />
     <link rel="stylesheet" href="css/generel.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
   </head>
   <body>
-   <nav id="toppen">
-    <div>
-      <a href="index.html"><img src="ikoner/LOGO.svg" class="logo"> </a>
-    </div>
-    <input type="checkbox" id="click">
-    <label for="click" class="menu-btn">
-    <i class="fas fa-bars"></i>
-    </label>
-    <ul>
-      <li><a  href="oevelser.html">Øvelser</a></li>
-      <li><a href="bliv_medlem.html">Bliv medlem</a></li>
-      <li><a class="active" href="kost.html">Kost</a></li>
-      <li><a href="om_os.html">Om os</a></li>
-   </ul>
- </nav>
+    <nav id="toppen">
+      <div>
+        <a href="index.html"><img src="ikoner/LOGO.svg" alt="gymguide" class="logo" /> </a>
+      </div>
+      <input type="checkbox" id="click" />
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a href="oevelser.html">Øvelser</a></li>
+        <li><a href="bliv_medlem.html">Bliv medlem</a></li>
+        <li><a class="active" href="kost.html">Kost</a></li>
+        <li><a href="om_os.html">Om os</a></li>
+      </ul>
+    </nav>
 
     <main>
       <h1>Opskrifter</h1>
       <section class="kategorier_kost">
         <ul>
           <li>
-            <button data-type="alle" class="valgt"><p>Alle</p></button>
+            <button data-type="alle" class="valgt">Alle</button>
           </li>
           <li>
-            <button data-type="low-carb"><p>Low Carb</p></button>
+            <button data-type="low-carb">Low Carb</button>
           </li>
           <li>
-            <button data-type="vegetar"><p>Vegetar</p></button>
+            <button data-type="vegetar">Vegetar</button>
           </li>
           <li>
-            <button data-type="high protein"><p>High Protein</p></button>
+            <button data-type="high protein">High Protein</button>
           </li>
-          
         </ul>
-      </section> 
+      </section>
       <section class="container"></section>
 
       <template>
         <article id="ret">
           <div>
-            <img src="" alt="" class="billede">
-            <h3 class="navn"></h2>
+            <img src="" alt="" class="billede" />
+            <h3 class="navn"></h3>
           </div>
-            
-              <div class="maaltid_og_knap">
-                <p class="maaltid">
-                  <strong>Måltid</strong>
-                </p>
-                <button>Se mere</button>
-              </div>
-            </article>
-            
-        </template>
+
+          <div class="maaltid_og_knap">
+            <p class="maaltid">
+              <strong>Måltid</strong>
+            </p>
+            <button>Se mere</button>
+          </div>
+        </article>
+      </template>
     </main>
 
     <footer>
@@ -96,10 +94,9 @@
 
       <p class="copyright">© GYMGUIDE 2022</p>
     </footer>
-   
 
-    <script src="javascript/script.js"></script> 
-   
+    <script src="javascript/script.js"></script>
+
     <script src="javascript/kost.js"></script>
   </body>
 </html>

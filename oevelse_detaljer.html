@@ -14,7 +14,7 @@
   <body>
     <nav id="toppen">
       <div>
-        <a href="index.html"><img src="ikoner/LOGO.svg" class="logo" /> </a>
+        <a href="index.html"><img src="ikoner/LOGO.svg" alt="Gymguide logo" class="logo" /> </a>
       </div>
       <input type="checkbox" id="click" />
       <label for="click" class="menu-btn">
@@ -30,15 +30,14 @@
     <main>
       <section class="oevelser_detaljer_container">
         <article class="oevelse_container oevelse_detaljer">
-          <iframe " src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <div class="oevelse_tekst">
             <h3 class="navn"></h3>
-  
+
             <p class="muskelgruppe"></p>
             <p class="fordele_ved"></p>
             <p class="saadan_laver_du"></p>
-            
-           </div>
+          </div>
         </article>
       </section>
     </main>
@@ -92,7 +91,7 @@
         document.querySelector("article iframe").src = "https://www.youtube.com/embed/q1fCgfieNEs";
         // console.log(oevelse.billednavn);
         document.querySelector(".navn").textContent = oevelse.oevelse_navn;
-        document.querySelector(".muskelgruppe").innerHTML =  "<strong>Muskelgruppe |  </strong>"  + oevelse.muskelgruppe;
+        document.querySelector(".muskelgruppe").innerHTML = "<strong>Muskelgruppe |  </strong>" + oevelse.muskelgruppe;
 
         // document.querySelector(".muskelgruppe").textContent = "Muskelgruppe | " + oevelse.muskelgruppe;
         document.querySelector(".fordele_ved").innerHTML = " <strong>Fordele ved " + oevelse.oevelse_navn + ":</strong> <br>" + oevelse.fordele_ved;
