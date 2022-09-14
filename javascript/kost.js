@@ -1,4 +1,4 @@
-const header = document.querySelector("header h2"); //øverst i min javaScript laver jeg en pointer til min h2'er og kalder den header
+
 const url = "https://traeningsoevelser-172f.restdb.io/rest/opskrifter?"
 const myHeaders = {
          "x-apikey": "631f0ecefdc15b0265f17313"
@@ -15,7 +15,7 @@ const myHeaders = {
 
     //vi skal lægge eventListeners på alle knapper - så der udføres en funtion ved klik. 
       function start() {
-            const filterknapper = document.querySelectorAll("nav button");
+            const filterknapper = document.querySelectorAll(".kategorier_kost button");
             //den konstant looper jeg så igennem med en foreach, og ligger en eventListener på hver knap.
             filterknapper.forEach(knap => knap.addEventListener("click", filtrerRetter));
         // også loader vi JSON
@@ -31,7 +31,7 @@ const myHeaders = {
           document.querySelector(".valgt").classList.remove("valgt");//fjern klassen 'valgt' fra den knap
           this.classList.add("valgt")//marker den knap der er klikket på. 
           visRetter(); //kalder funktionen igen, efter det nye filter er sat. derved kan vi med en if-sætning filtrere på de retter, osm vi får vist så de svarer til vores filter.
-          header.textContent = this.textContent; // vores header (h2), skal have samme textContent, som den knap der er blevet klikket på. dvs. hovedretter -> hovedretter og dessert -> dessert. osv. 
+          
 
       }
 
@@ -64,12 +64,18 @@ const myHeaders = {
         if(filter == ret.type || filter =="alle" ) { //udbyg if-sætningen: hvis filter er lig med valuen af ret.kategori (vegetar, low carb og high protein) eller hvis filter er lig med 'alle'
             const klon = template.cloneNode(true).content; 
             klon.querySelector(".navn").textContent = ret.navn;
-            klon.querySelector(".maaltid").textContent = ret.maaltid;
+            klon.querySelector(".maaltid").innerHTML = " <strong> Måltid </strong> | " + ret.maaltid;
             klon.querySelector("img").src = "kost_bilelder/" + ret.billedenavn
+
+            klon.querySelector("article").addEventListener("click", () => visDetaljer(ret));
             container.appendChild(klon);
 
         }
-
-
     })
+    
 }
+
+function visDetaljer(ret) {
+      console.log(ret.navn);
+      location.href = "kost_detaljer.html?id=" + ret._id;
+    }
