@@ -41,6 +41,7 @@ ul {
   margin-bottom: 160px;
   margin-right: 20px;
   padding: 5px 20px;
+  cursor: pointer;
 }
 .medlem img {
   width: 100%;
