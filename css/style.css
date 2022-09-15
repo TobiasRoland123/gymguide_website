@@ -65,7 +65,8 @@ nav ul li a {
 }
 nav ul li a.active,
 nav ul li a:hover {
-  color: var(--color_1);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
 }
 nav .menu-btn i {
   color: #fff;
@@ -119,7 +120,8 @@ input[type="checkbox"] {
   nav ul li a.active,
   nav ul li a:hover {
     background: none;
-    color: var(--color_1);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
   }
 }
 .content {
