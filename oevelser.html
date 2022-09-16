@@ -29,6 +29,7 @@
       </ul>
     </nav>
     <main>
+      <!-- -----------------------knapper til kategorier-------------------------------- -->
       <h1>Øvelser</h1>
       <section class="kategorier">
         <ul>
@@ -52,9 +53,11 @@
           </li>
         </ul>
       </section>
+      <!-- -----------------------Alle øvelser -------------------------------- -->
       <section class="oevelser_grid"></section>
     </main>
 
+    <!-- -----------------------Template til øvelser-------------------------------- -->
     <template>
       <article class="oevelse_container">
         <img src="" alt="" />
@@ -65,9 +68,10 @@
         </div>
       </article>
     </template>
+    <!-- ----------------------- Footer -------------------------------- -->
     <footer>
       <div class="footer_container">
-        <a class="til_top" href="#toppen"><img src="ikoner/pil_op_sort.svg" alt="" height="57px" width="'57px"/></a>
+        <a class="til_top" href="#toppen"><img src="ikoner/pil_op_sort.svg" alt="" height="57px" width="'57px" /></a>
 
         <article>
           <h3>Følg med:</h3>
@@ -92,6 +96,7 @@
     </footer>
 
     <script>
+      // ---------------  variabler bliver oprettet, og nogle får en værdi ----------------------------
       const urlOevelser = "https://traeningsoevelser-172f.restdb.io/rest/oevelser";
       const option = {
         headers: {
@@ -105,6 +110,7 @@
       let oevelser;
       let filter = "alle";
 
+      // ---------------  Funktion, som sætter filterværdi lig med det filter man har valgt ----------------------------
       function filtrerOvelser() {
         filter = this.dataset.kategori;
         // console.log(filter);
@@ -113,7 +119,7 @@
 
         vis();
       }
-
+      // ---------------  Funktion, som henter json data ind  ----------------------------
       async function hentData() {
         const respons = await fetch(urlOevelser, option);
         oevelser = await respons.json();
@@ -121,6 +127,7 @@
         vis();
       }
 
+      // ---------------  Funktion, som viser elementerne i vores json ----------------------------
       function vis() {
         main.textContent = "";
         oevelser.forEach((oevelse) => {
@@ -137,13 +144,13 @@
           }
         });
       }
-
+      // ---------------  Funktion, som fører til en seperat side med det element, som man har valgt at trykke på ----------------------------
       function visDetaljer(oevelsen) {
         console.log(oevelsen.oevelse_navn);
 
         location.href = "oevelse_detaljer.html?id=" + oevelsen._id;
       }
-
+      // ---------------  Kalder hent data ----------------------------
       hentData();
     </script>
 
