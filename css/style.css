@@ -29,102 +29,84 @@ header {
 
 /* 
 CSS til navbaren */
-
 nav {
+  background-color: var(--color_3);
   display: flex;
-  height: 90px;
-  width: 100%;
-  background: var(--color_3);
-  align-items: center;
   justify-content: space-between;
-  padding: 0 50px 0 100px;
-  flex-wrap: wrap;
+  padding: 2% 7%;
+  min-height: 100px;
 }
-nav .logo {
-  color: #fff;
-  width: 200px;
-  cursor: pointer;
-  padding: 10px 0;
+.logo_container {
+  max-width: 250px;
 }
-nav ul {
+
+.logo_container img {
+  max-width: 100%;
+}
+
+nav button {
+  background: none;
+  border: none;
+  z-index: 1;
+}
+.bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  border-radius: 12px;
+  margin: 5px 0 0 auto;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+.nav_menu {
+  position: fixed;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   list-style: none;
+  left: 100%;
+  top: 0%;
+  width: 100%;
+
+  align-items: center;
+  padding: 10% 0 10%;
+  background-color: var(--color_2);
+  transition: all 0.3s ease-in-out;
 }
-nav ul li {
-  margin: 0 5px;
-}
-nav ul li a {
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 8px 15px;
-  /* border-radius: 10px; */
-  letter-spacing: 1px;
-  /* transition: all 0.3s ease; */
-}
-nav ul li a.active,
-nav ul li a:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-}
-nav .menu-btn i {
-  color: #fff;
-  font-size: 22px;
+
+.nav_menu li {
+  margin: 10% auto 10%;
+  font-size: var(--overskrift_3);
   cursor: pointer;
-  display: none;
 }
-input[type="checkbox"] {
-  display: none;
+
+.nav_menu li:hover {
+  font-weight: 700;
+  font-size: 1.3rem;
 }
-@media (max-width: 1000px) {
-  nav {
-    padding: 0 40px 0 50px;
-  }
+
+.aktuel_side {
+  text-decoration: underline;
 }
-@media (max-width: 920px) {
-  nav .menu-btn i {
-    display: block;
-  }
-  #click:checked ~ .menu-btn i:before {
-    content: "\f00d";
-  }
-  nav ul {
-    position: absolute;
-    top: 80px;
-    left: -100%;
-    background: #2f615c;
-    height: 100vh;
-    width: 100%;
-    text-align: center;
-    display: block;
-    transition: all 0.3s ease;
-    z-index: 1;
-  }
-  #click:checked ~ ul {
-    left: 0;
-  }
-  nav ul li {
-    width: 100%;
-    margin: 40px 0;
-  }
-  nav ul li a {
-    width: 100%;
-    margin-left: -100%;
-    display: block;
-    font-size: 20px;
-  }
-  #click:checked ~ ul li a {
-    margin-left: 0px;
-  }
-  nav ul li a.active,
-  nav ul li a:hover {
-    background: none;
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-  }
+
+.active .bar:nth-child(2) {
+  opacity: 0;
+  z-index: 1;
 }
-.content {
+
+.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav_menu.active {
+  left: 0%;
+}
+
+/* .content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -138,7 +120,7 @@ input[type="checkbox"] {
 .content div {
   font-size: 40px;
   font-weight: 700;
-}
+} */
 /* CSS til andet */
 main {
   margin: 0 auto;
@@ -515,6 +497,30 @@ footer p {
 }
 
 @media screen and (min-width: 530px) {
+  nav {
+    padding: 2%;
+    justify-content: space-between;
+  }
+
+  .burgermenu_knap {
+    display: none;
+  }
+
+  .nav_menu {
+    display: flex;
+    position: unset;
+    justify-content: space-between;
+    flex-direction: row;
+    background: none;
+    padding: 0;
+    max-width: 300px;
+  }
+
+  .nav_menu li {
+    margin: 0;
+    font-size: 1rem;
+  }
+
   .splashbillede {
     background-size: 170%;
     background-position: 50% 50%;
@@ -556,6 +562,10 @@ footer p {
 }
 
 @media screen and (min-width: 830px) {
+  nav {
+    padding: 2% 5%;
+  }
+
   main > h1 {
     text-align: start;
     margin: 3% 5% 5%;

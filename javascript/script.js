@@ -1,5 +1,5 @@
 const burger = document.querySelector("button");
-const menu = document.querySelector(".navlinks");
+const menu = document.querySelector(".nav_menu");
 
 window.addEventListener("load", sidenVises);
 
